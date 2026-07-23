@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dumkin — Design System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --dumkin-orange: #F04B1E;
+    --dumkin-orange-dark: #C93712;
+    --dumkin-maroon: #A8321C;
+    --dumkin-charcoal: #1B1B1B;
+    --dumkin-charcoal-soft: #2A2A2A;
+    --dumkin-cream: #FFF6EC;
+    --dumkin-tan: #F1E4C8;
+    --dumkin-paper: #FFFFFF;
+    --dumkin-gold: #FFB627;
+    --dumkin-grey-brick: #8C8880;
+    --dumkin-green-turf: #3B7A3E;
+    --dumkin-ink: #141414;
+    --dumkin-ink-soft: #5C5854;
+
+    --font-display: 'Fredoka', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    --radius-pill: 999px;
+    --radius-card: 14px;
+    --shadow-card: 0 8px 24px rgba(0,0,0,0.12);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--dumkin-cream);
+    color: var(--dumkin-ink);
+    font-family: var(--font-body);
+    line-height: 1.6;
+  }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    margin: 0 0 8px;
+  }
+
+  section { padding: 64px 0; border-bottom: 1px solid rgba(0,0,0,0.07); }
+  section:last-child { border-bottom: none; }
+
+  .eyebrow {
+    font-family: var(--font-body);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 12px;
+    color: var(--dumkin-orange);
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .section-title { font-size: 30px; margin-bottom: 8px; }
+  .section-sub { color: var(--dumkin-ink-soft); margin-bottom: 32px; max-width: 640px; }
+
+  /* HERO */
+  .hero {
+    background:
+      linear-gradient(180deg, rgba(15,15,15,0.55) 0%, rgba(15,15,15,0.92) 100%),
+      repeating-linear-gradient(135deg, #3a3a3a 0px, #3a3a3a 2px, #2f2f2f 2px, #2f2f2f 40px);
+    color: var(--dumkin-cream);
+    padding: 90px 24px 70px;
+    text-align: center;
+  }
+  .hero .tag {
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: var(--dumkin-gold);
+    margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-size: clamp(48px, 9vw, 96px);
+    color: var(--dumkin-orange);
+    letter-spacing: -0.02em;
+    line-height: 0.95;
+    text-transform: uppercase;
+    text-shadow: 0 6px 0 rgba(0,0,0,0.25);
+  }
+  .hero p.sub {
+    font-family: var(--font-body);
+    font-weight: 500;
+    color: var(--dumkin-cream);
+    opacity: 0.85;
+    margin-top: 14px;
+    font-size: 16px;
+  }
+
+  /* COLOR SWATCHES */
+  .swatch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 20px;
+  }
+  .swatch {
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    background: var(--dumkin-paper);
+  }
+  .swatch .fill { height: 90px; }
+  .swatch .meta { padding: 12px 14px; }
+  .swatch .name { font-weight: 700; font-size: 14px; }
+  .swatch .hex { font-family: monospace; color: var(--dumkin-ink-soft); font-size: 13px; }
+
+  /* TYPE SPECIMEN */
+  .specimen { margin-bottom: 28px; }
+  .specimen .label {
+    font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--dumkin-ink-soft); margin-bottom: 6px;
+  }
+  .display-xl { font-family: var(--font-display); font-size: 56px; font-weight: 700; text-transform: uppercase; color: var(--dumkin-charcoal); letter-spacing: -0.01em;}
+  .display-l { font-family: var(--font-display); font-size: 34px; font-weight: 600; color: var(--dumkin-charcoal);}
+  .body-l { font-family: var(--font-body); font-size: 18px; color: var(--dumkin-ink); max-width: 560px;}
+  .caption { font-family: var(--font-body); font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; font-size: 12px; color: var(--dumkin-orange);}
+
+  /* BUTTONS */
+  .btn-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .btn {
+    font-family: var(--font-body);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    padding: 14px 28px;
+    border-radius: var(--radius-pill);
+    border: none;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .btn-primary { background: var(--dumkin-orange); color: var(--dumkin-cream); }
+  .btn-primary:hover { background: var(--dumkin-orange-dark); transform: translateY(-1px); }
+  .btn-secondary {
+    background: transparent;
+    color: var(--dumkin-charcoal);
+    border: 1.5px solid var(--dumkin-charcoal);
+  }
+  .btn-secondary:hover { background: var(--dumkin-charcoal); color: var(--dumkin-cream); }
+  .btn-dark-secondary {
+    background: transparent;
+    color: var(--dumkin-cream);
+    border: 1.5px solid var(--dumkin-cream);
+  }
+
+  /* MENU COMPONENT */
+  .menu-demo {
+    background: var(--dumkin-charcoal);
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    max-width: 480px;
+    box-shadow: var(--shadow-card);
+  }
+  .menu-demo .cat-header {
+    background: var(--dumkin-orange);
+    color: var(--dumkin-cream);
+    font-family: var(--font-display);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+  .menu-demo .rows { padding: 6px 20px 16px; }
+  .menu-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px dashed rgba(255,246,236,0.15);
+  }
+  .menu-row:last-child { border-bottom: none; }
+  .menu-row .item-name { color: var(--dumkin-cream); font-weight: 600; font-size: 15px; }
+  .menu-row .item-desc { color: #b8b3ac; font-size: 12px; margin-top: 2px; }
+  .price-bubble {
+    background: var(--dumkin-cream);
+    color: var(--dumkin-charcoal);
+    font-weight: 800;
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: var(--radius-pill);
+    white-space: nowrap;
+  }
+
+  /* CARDS */
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap: 20px; }
+  .food-card {
+    background: var(--dumkin-paper);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+    position: relative;
+  }
+  .food-card .img {
+    height: 130px;
+    background: linear-gradient(135deg, var(--dumkin-grey-brick), var(--dumkin-charcoal-soft));
+  }
+  .food-card .body { padding: 16px; }
+  .food-card .price-bubble { position: absolute; top: 106px; right: 14px; background: var(--dumkin-orange); color: var(--dumkin-cream); }
+  .food-card h4 { margin: 0 0 4px; font-family: var(--font-display); font-size: 17px; }
+  .food-card p { margin: 0; font-size: 13px; color: var(--dumkin-ink-soft); }
+
+  /* SECTION TEXTURE DIVIDER */
+  .stripe-divider {
+    height: 18px;
+    background: repeating-linear-gradient(90deg, #1B1B1B 0 22px, #FFFFFF 22px 44px);
+  }
+
+  footer {
+    background: var(--dumkin-charcoal);
+    color: var(--dumkin-cream);
+    text-align: center;
+    padding: 40px 24px 0;
+  }
+  footer .foot-inner { padding-bottom: 28px; }
+  footer .wordmark { font-family: var(--font-display); color: var(--dumkin-orange); font-size: 22px; text-transform: uppercase; }
+  footer .small { color: #a39d95; font-size: 13px; margin-top: 8px; }
+
+  code.token { background: rgba(0,0,0,0.06); padding: 2px 6px; border-radius: 4px; font-size: 13px;}
+</style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="tag">Design System</div>
+    <h1>Dumkin</h1>
+    <p class="sub">Reviving Your Palate — website &amp; social media style guide</p>
+  </div>
+
+  <div class="wrap">
+
+    <section>
+      <span class="eyebrow">01 — Color Palette</span>
+      <h2 class="section-title">Colors</h2>
+      <p class="section-sub">Orange is the hero. Charcoal and cream carry the layout. Gold and turf green are seasoning — use sparingly.</p>
+      <div class="swatch-grid">
+        <div class="swatch"><div class="fill" style="background:var(--dumkin-orange)"></div><div class="meta"><div class="name">Dumkin Orange</div><div class="hex">#F04B1E</div></div></div>
+        <div class="swatch"><div class="fill" style="background:var(--dumkin-orange-dark)"></div><div class="meta"><div class="name">Orange Dark</div><div class="hex">#C93712</div></div></div>
+        <div class="swatch"><div class="fill" style="background:var(--dumkin-maroon)"></div><div class="meta"><div class="name">Maroon</div><div class="hex">#A8321C</div></div></div>
+        <div class="swatch"><div class="fill" style="background:var(--dumkin-charcoal)"></div><div class="meta"><div class="name">Charcoal</div><div class="hex">#1B1B1B</div></div></div>
+        <div class="swatch"><div class="fill" style="background:var(--dumkin-charcoal-soft)"></div><div class="meta"><div class="name">Charcoal Soft</div><div class="hex">#2A2A2A</div></div></div>
+        <div class="swatch"><div class="fill" style="background:var(--dumkin-cream); border-bottom:1px solid #eee"></div><div class="meta"><div class="name">Cream</div><div class="hex">#FFF6EC</div></div></div>
+        <div class="swatch"><div class="fill" style="background:var(--dumkin-tan); border-bottom:1px solid #eee"></div><div class="meta"><div class="name">Tan (print menu)</div><div class="hex">#F1E4C8</div></div></div>
+        <div class="swatch"><div class="fill" style="background:var(--dumkin-gold)"></div><div class="meta"><div class="name">Gold</div><div class="hex">#FFB627</div></div></div>
+        <div class="swatch"><div class="fill" style="background:var(--dumkin-grey-brick)"></div><div class="meta"><div class="name">Grey Brick</div><div class="hex">#8C8880</div></div></div>
+        <div class="swatch"><div class="fill" style="background:var(--dumkin-green-turf)"></div><div class="meta"><div class="name">Green Turf (accent only)</div><div class="hex">#3B7A3E</div></div></div>
+      </div>
+    </section>
+
+    <section>
+      <span class="eyebrow">02 — Typography</span>
+      <h2 class="section-title">Type</h2>
+      <p class="section-sub">Display: <strong>Fredoka</strong> (rounded, heavy — echoes the wordmark). Body/UI: <strong>Inter</strong>.</p>
+
+      <div class="specimen">
+        <div class="label">Display XL — Hero H1</div>
+        <div class="display-xl">Shawarma & Momos</div>
+      </div>
+      <div class="specimen">
+        <div class="label">Display L — Section H2</div>
+        <div class="display-l">Fresh off the grill, every day</div>
+      </div>
+      <div class="specimen">
+        <div class="label">Body</div>
+        <div class="body-l">Dhakaiya Chicken Shawarma, hand-rolled and grilled to order — paired with our house garlic sauce and fresh-cut pickles.</div>
+      </div>
+      <div class="specimen">
+        <div class="label">Caption / Eyebrow</div>
+        <div class="caption">Reviving Your Palate</div>
+      </div>
+    </section>
+
+    <section>
+      <span class="eyebrow">03 — Buttons</span>
+      <h2 class="section-title">Buttons</h2>
+      <p class="section-sub">Pill-shaped, bold, uppercase. Primary orange for the main conversion action.</p>
+      <div class="btn-row">
+        <button class="btn btn-primary">Order Now</button>
+        <button class="btn btn-secondary">View Menu</button>
+      </div>
+      <div style="background:var(--dumkin-charcoal); padding:24px; border-radius:14px; margin-top:20px;">
+        <div class="btn-row">
+          <button class="btn btn-primary">Call &amp; Order</button>
+          <button class="btn btn-dark-secondary">Find Us</button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <span class="eyebrow">04 — Menu Component</span>
+      <h2 class="section-title">Menu Board</h2>
+      <p class="section-sub">Digitized version of the physical Dumkin menu board — orange category headers, dashed dividers, cream price bubbles.</p>
+      <div class="menu-demo">
+        <div class="cat-header">Shawarma</div>
+        <div class="rows">
+          <div class="menu-row">
+            <div><div class="item-name">Dhakaiya Chicken Shawarma</div><div class="item-desc">House garlic sauce, pickles</div></div>
+            <div class="price-bubble">৳99</div>
+          </div>
+          <div class="menu-row">
+            <div><div class="item-name">Malai Kabab Roll</div><div class="item-desc">Beef option available</div></div>
+            <div class="price-bubble">৳120</div>
+          </div>
+        </div>
+        <div class="cat-header">Momos</div>
+        <div class="rows">
+          <div class="menu-row">
+            <div><div class="item-name">Chicken Steam Momos</div><div class="item-desc">5 pcs · house chutney</div></div>
+            <div class="price-bubble">৳125</div>
+          </div>
+          <div class="menu-row">
+            <div><div class="item-name">Chicken Creamy Momos</div><div class="item-desc">5 pcs</div></div>
+            <div class="price-bubble">৳139</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <span class="eyebrow">05 — Food Cards</span>
+      <h2 class="section-title">Gallery / Menu Cards</h2>
+      <p class="section-sub">For grid layouts — gallery sections, featured items, category tiles.</p>
+      <div class="card-grid">
+        <div class="food-card">
+          <div class="img"></div>
+          <div class="price-bubble">৳99</div>
+          <div class="body"><h4>Club Sandwich</h4><p>Grilled chicken, cheese, fresh veg</p></div>
+        </div>
+        <div class="food-card">
+          <div class="img"></div>
+          <div class="price-bubble">৳80</div>
+          <div class="body"><h4>Fuchka Regular</h4><p>Classic street-style, tangy tamarind water</p></div>
+        </div>
+        <div class="food-card">
+          <div class="img"></div>
+          <div class="price-bubble">৳129</div>
+          <div class="body"><h4>Chicken Gravy Burger</h4><p>Spiced gravy patty, brioche bun</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <span class="eyebrow">07 — Texture &amp; Dividers</span>
+      <h2 class="section-title">Section Dividers</h2>
+      <p class="section-sub">Use the black-and-white awning stripe sparingly as a section break — echoes the seating-area design.</p>
+      <div class="stripe-divider"></div>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="foot-inner">
+      <div class="wordmark">Dumkin</div>
+      <div class="small">Reviving Your Palate &nbsp;•&nbsp; 01866-596939 &nbsp;•&nbsp; Delivery Available</div>
+    </div>
+    <div class="stripe-divider"></div>
+  </footer>
+
+</body>
+</html>

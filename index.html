@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DUMKIN — Fresh Shawarma, Burgers & Fast Food in Bhatiari, Chittagong</title>
+  <meta name="description" content="DUMKIN is Bhatiari's most popular fast-food destination serving freshly prepared Chicken Shawarma, BBQ Burgers, Meat Box, Momos and more. Accessible to all of Chittagong. Call to order: 01304616961.">
+  <meta name="keywords" content="Dumkin, Bhatiari, Chittagong, fast food, shawarma, burger, momos, meat box, Naga burger, food cart">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo" aria-label="DUMKIN Home">DUMKIN</a>
+      <ul class="nav__links" id="nav-links" role="list">
+        <li><a href="#menu" class="nav__link">Menu</a></li>
+        <li><a href="#gallery" class="nav__link">Gallery</a></li>
+        <li><a href="#reviews" class="nav__link">Reviews</a></li>
+        <li><a href="#visit" class="nav__link">Location</a></li>
+      </ul>
+      <a href="tel:01304616961" class="btn btn-primary nav__cta" id="nav-cta">Call & Order</a>
+      <button class="nav__burger" id="nav-burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="hero" aria-label="Hero">
+    <div class="hero__bg">
+      <div class="hero__scrim"></div>
+      <div class="hero__texture"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Bhatiari, Chittagong</p>
+      <h1 class="hero__title">DUMKIN</h1>
+      <p class="hero__tagline">Reviving Your Palate</p>
+      <p class="hero__sub">Fresh Shawarma, Burgers & Fast Food — right in the heart of Bhatiari.</p>
+      <div class="hero__actions">
+        <a href="#menu" class="btn btn-primary btn--lg" id="hero-view-menu">View Menu</a>
+        <a href="tel:01304616961" class="btn btn-ghost btn--lg" id="hero-call">📞 Call to Order</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ==================== FEATURED MENU ==================== -->
+  <section class="section section--light" id="menu" aria-labelledby="featured-title">
+    <div class="wrap">
+      <span class="eyebrow">Our Favourites</span>
+      <h2 class="section-title" id="featured-title">Featured Items</h2>
+      <p class="section-sub">Handpicked crowd favourites — fresh off the grill, every single day.</p>
+
+      <div class="card-grid" id="featured-grid">
+
+        <article class="food-card" id="card-shawarma">
+          <div class="food-card__img">
+            <img src="Food_Images/Chicken Shawarma.jpg" alt="Chicken Shawarma" class="food-card__photo">
+          </div>
+          <div class="price-bubble">৳110</div>
+          <div class="food-card__body">
+            <h3 class="food-card__name">Chicken Shawarma</h3>
+            <p class="food-card__desc">Freshly grilled chicken, house garlic sauce & pickles — our signature.</p>
+            <a href="tel:01304616961" class="btn btn-primary btn--sm food-card__order">Order Now</a>
+          </div>
+        </article>
+
+        <article class="food-card" id="card-naga">
+          <div class="food-card__img">
+            <img src="Food_Images/BBQ Burger.jpg" alt="BBQ Burger" class="food-card__photo">
+          </div>
+          <div class="price-bubble">৳130</div>
+          <div class="food-card__body">
+            <h3 class="food-card__name">BBQ Burger</h3>
+            <p class="food-card__desc">Smoky BBQ glazed chicken patty in a soft bun — bold flavour, every bite.</p>
+            <a href="tel:01304616961" class="btn btn-primary btn--sm food-card__order">Order Now</a>
+          </div>
+        </article>
+
+        <article class="food-card" id="card-meatbox">
+          <div class="food-card__img">
+            <img src="Food_Images/Meat Box.jpg" alt="Meat Box" class="food-card__photo">
+          </div>
+          <div class="price-bubble">৳190</div>
+          <div class="food-card__body">
+            <h3 class="food-card__name">Meat Box</h3>
+            <p class="food-card__desc">Available in Standard, BBQ & Naga — a complete meal in one satisfying box.</p>
+            <a href="tel:01304616961" class="btn btn-primary btn--sm food-card__order">Order Now</a>
+          </div>
+        </article>
+
+        <article class="food-card" id="card-momo">
+          <div class="food-card__img">
+            <img src="Food_Images/Chicken Steamed Momo.jpg" alt="Chicken Steamed Momo" class="food-card__photo">
+          </div>
+          <div class="price-bubble">৳125</div>
+          <div class="food-card__body">
+            <h3 class="food-card__name">Chicken Steamed Momo</h3>
+            <p class="food-card__desc">Soft & juicy 5-piece steamed momos with our house chutney dip.</p>
+            <a href="tel:01304616961" class="btn btn-primary btn--sm food-card__order">Order Now</a>
+          </div>
+        </article>
+
+        <article class="food-card" id="card-wings">
+          <div class="food-card__img">
+            <img src="Food_Images/Chicken Wings.jpg" alt="Chicken Wings" class="food-card__photo">
+          </div>
+          <div class="price-bubble">৳150</div>
+          <div class="food-card__body">
+            <h3 class="food-card__name">Chicken Wings</h3>
+            <p class="food-card__desc">6 pieces of golden crispy wings with a fiery kick — impossible to stop at one.</p>
+            <a href="tel:01304616961" class="btn btn-primary btn--sm food-card__order">Order Now</a>
+          </div>
+        </article>
+
+        <article class="food-card" id="card-chaap">
+          <div class="food-card__img">
+            <img src="Food_Images/Spicy Pasta.jpg" alt="Spicy Pasta" class="food-card__photo">
+          </div>
+          <div class="price-bubble">৳150</div>
+          <div class="food-card__body">
+            <h3 class="food-card__name">Spicy Pasta</h3>
+            <p class="food-card__desc">Fiery tomato-based pasta with bold spices — a satisfying crowd-pleaser.</p>
+            <a href="tel:01304616961" class="btn btn-primary btn--sm food-card__order">Order Now</a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="section-cta">
+        <a href="#full-menu" class="btn btn-secondary btn--lg" id="view-full-menu">See Full Menu ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== STRIPE DIVIDER ==================== -->
+  <div class="stripe-divider" aria-hidden="true"></div>
+
+  <!-- ==================== ABOUT / SIGNATURE ==================== -->
+  <section class="section section--dark" id="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <span class="eyebrow eyebrow--gold">Our Story</span>
+      <h2 class="section-title section-title--light" id="about-title">Born on the Streets of Bhatiari</h2>
+      <p class="about__para">DUMKIN has become a beloved fast-food destination in Bhatiari, Chittagong — serving freshly prepared shawarma, burgers, momos, and grills at prices that make great food accessible to everyone. What started as one of the first food carts in the area has grown into a proper sit-down spot, without ever losing its street-food soul.</p>
+
+      <div class="signature-grid" id="signature-grid" aria-label="Signature dishes">
+
+        <div class="sig-card" id="sig-shawarma">
+          <div class="sig-card__img">
+            <img src="Food_Images/Chicken Shawarma.jpg" alt="Chicken Shawarma" class="sig-card__photo">
+          </div>
+          <div class="sig-card__content">
+            <span class="sig-card__tag">Signature</span>
+            <h3 class="sig-card__title">Chicken Shawarma</h3>
+            <p class="sig-card__desc">Hand-rolled, flame-grilled, and finished with our legendary special white garlic sauce. Rated the best in Bhatiari by our customers.</p>
+            <div class="sig-card__price">৳110</div>
+          </div>
+        </div>
+
+        <div class="sig-card sig-card--reverse" id="sig-naga">
+          <div class="sig-card__img">
+            <img src="Food_Images/BBQ Burger.jpg" alt="BBQ Burger" class="sig-card__photo">
+          </div>
+          <div class="sig-card__content">
+            <span class="sig-card__tag">🌶️ Fan Favourite</span>
+            <h3 class="sig-card__title">Naga Burger</h3>
+            <p class="sig-card__desc">"Hot & spicy! Naga Burger 10/10 ❤️" — our customers say it better than we ever could. A bold heat that keeps you coming back.</p>
+            <div class="sig-card__price">৳130</div>
+          </div>
+        </div>
+
+        <div class="sig-card" id="sig-whitesauce">
+          <div class="sig-card__img">
+            <img src="Food_Images/Special Sauce.jpg" alt="Special Sauce" class="sig-card__photo">
+          </div>
+          <div class="sig-card__content">
+            <span class="sig-card__tag">Secret Recipe</span>
+            <h3 class="sig-card__title">Special Sauce</h3>
+            <p class="sig-card__desc">The sauce that started everything. Creamy, garlicky, and balanced — people come for the shawarma and stay for the sauce.</p>
+            <div class="sig-card__price">Included</div>
+          </div>
+        </div>
+
+        <div class="sig-card sig-card--reverse" id="sig-meatbox">
+          <div class="sig-card__img">
+            <img src="Food_Images/Meat Box.jpg" alt="Meat Box" class="sig-card__photo">
+          </div>
+          <div class="sig-card__content">
+            <span class="sig-card__tag">Bestseller</span>
+            <h3 class="sig-card__title">Meat Box</h3>
+            <p class="sig-card__desc">A whole meal in a box. Choose from Standard, BBQ, or the scorching Naga version. Hearty, affordable, and always satisfying.</p>
+            <div class="sig-card__price">৳190</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FULL MENU ==================== -->
+  <section class="section section--tan" id="full-menu" aria-labelledby="menu-title">
+    <div class="wrap">
+      <span class="eyebrow">Full Menu</span>
+      <h2 class="section-title" id="menu-title">What We Serve</h2>
+      <p class="section-sub">Fresh-made every day. Call us to check availability or place an order.</p>
+
+      <div class="menu-board" id="menu-board">
+
+        <div class="menu-category" id="menu-shawarma">
+          <div class="menu-cat-header">Shawarma</div>
+          <div class="menu-rows">
+            <div class="menu-row"><div class="menu-item-info"><span class="menu-item-name">Chicken Shawarma</span><span class="menu-item-desc">House garlic sauce & fresh pickles</span></div><span class="price-bubble price-bubble--sm">৳110</span></div>
+          </div>
+        </div>
+
+        <div class="menu-category" id="menu-grill">
+          <div class="menu-cat-header">Grill</div>
+          <div class="menu-rows">
+            <div class="menu-row"><div class="menu-item-info"><span class="menu-item-name">Chicken Grill (Quarter)</span><span class="menu-item-desc">Smoky, marinated quarter chicken</span></div><span class="price-bubble price-bubble--sm">৳120</span></div>
+            <div class="menu-row"><div class="menu-item-info"><span class="menu-item-name">Chicken Grill (Full)</span><span class="menu-item-desc">Full bird, perfectly charred</span></div><span class="price-bubble price-bubble--sm">৳480</span></div>
+            <div class="menu-row"><div class="menu-item-info"><span class="menu-item-name">Chicken Chaap</span><span class="menu-item-desc">Rich, slow-cooked marinated chicken</span></div><span class="price-bubble price-bubble--sm">৳150</span></div>
+            <div class="menu-row"><div class="menu-item-info"><span class="menu-item-name">Paratha</span><span class="menu-item-desc">Freshly made layered flatbread</span></div><span class="price-bubble price-bubble--sm">৳15</span></div>
+          </div>
+        </div>
+
+        <div class="menu-category" id="menu-wings">
+          <div class="menu-cat-header">Wings</div>
+          <div class="menu-rows">
+            <div class="menu-row"><div class="menu-item-info"><span class="menu-item-name">Chicken Wings (4 pcs)</span><span class="menu-item-desc">Crispy, golden wings</span></div><span class="price-bubble price-bubble--sm">৳150</span></div>
+            <div class="menu-row"><div class="menu-item-info"><span class="menu-item-name">Crispy Hot Wings (6 pcs)</span><span class="menu-item-desc">Extra crispy, extra heat</span></div><span class="price-bubble price-bubble--sm">৳150</span></div>
+          </div>
+        </div>
+
+        <div class="menu-category" id="menu-meatbox">
+          <div class="menu-cat-header">Meat Box</div>
+          <div class="menu-rows">
+            <div class="menu-row"><div class="menu-item-info"><span class="menu-item-name">Standard Meat Box</span><span class="menu-item-desc">Classic, hearty & satisfying</span></div><span class="price-bubble price-bubble--sm">৳190</span></div>
+            <div class="menu-row"><div class="menu-item-info"><span class="menu-item-name">BBQ Meat Box</span><span class="menu-item-desc">Smoky BBQ sauce & tender meat</span></div><span class="price-bubble price-bubble--sm">৳190</span></div>
+            <div class="menu-row"><div class="menu-item-info"><span class="menu-item-name">Naga Meat Box</span><span class="menu-item-desc">Naga chilli heat for the brave</span></div><span class="price-bubble price-bubble--sm">৳190</span></div>
+          </div>
+        </div>
+
+        <div class="menu-category" id="menu-burger">
+          <div class="menu-cat-header">Burger (Chicken)</div>
+          <div class="menu-rows">
+            <div class="menu-row"><div class="menu-item-info"><span class="menu-item-name">BBQ Burger</span><span class="menu-item-desc">Smoky BBQ glazed patty</span></div><span class="price-bubble price-bubble--sm">৳130</span></div>
+            <div class="menu-row"><div class="menu-item-info"><span class="menu-item-name">Naga Burger</span><span class="menu-item-desc">Fiery naga chilli — hot & bold</span></div><span class="price-bubble price-bubble--sm">৳130</span></div>
+            <div class="menu-row"><div class="menu-item-info"><span class="menu-item-name">Shawarma Burger</span><span class="menu-item-desc">Shawarma-style seasoning in a bun</span></div><span class="price-bubble price-bubble--sm">৳100</span></div>
+          </div>
+        </div>
+
+        <div class="menu-category" id="menu-pasta">
+          <div class="menu-cat-header">Pasta</div>
+          <div class="menu-rows">
+            <div class="menu-row"><div class="menu-item-info"><span class="menu-item-name">Spicy Pasta</span><span class="menu-item-desc">Fiery tomato-based pasta</span></div><span class="price-bubble price-bubble--sm">৳100</span></div>
+
+          </div>
+        </div>
+
+        <div class="menu-category" id="menu-momo">
+          <div class="menu-cat-header">Momo</div>
+          <div class="menu-rows">
+            <div class="menu-row"><div class="menu-item-info"><span class="menu-item-name">Chicken Steamed Momo (5 pcs)</span><span class="menu-item-desc">Soft dumplings with house chutney</span></div><span class="price-bubble price-bubble--sm">৳125</span></div>
+            <div class="menu-row"><div class="menu-item-info"><span class="menu-item-name">Fried Chicken</span><span class="menu-item-desc">Crispy golden fried chicken</span></div><span class="price-bubble price-bubble--sm">৳100</span></div>
+          </div>
+        </div>
+
+        <div class="menu-category" id="menu-drinks">
+          <div class="menu-cat-header">Drinks</div>
+          <div class="menu-rows">
+            <div class="menu-row"><div class="menu-item-info"><span class="menu-item-name">Mint Lemon</span><span class="menu-item-desc">Refreshing zesty cooler</span></div><span class="price-bubble price-bubble--sm">৳40</span></div>
+          </div>
+        </div>
+
+        <div class="menu-category" id="menu-tea">
+          <div class="menu-cat-header">Tea</div>
+          <div class="menu-rows">
+            <div class="menu-row"><div class="menu-item-info"><span class="menu-item-name">Milk Tea</span><span class="menu-item-desc">Warm & comforting classic</span></div><span class="price-bubble price-bubble--sm">৳20</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== STRIPE DIVIDER ==================== -->
+  <div class="stripe-divider" aria-hidden="true"></div>
+
+  <!-- ==================== REVIEWS ==================== -->
+  <section class="section section--dark" id="reviews" aria-labelledby="reviews-title">
+    <div class="wrap">
+      <span class="eyebrow eyebrow--gold">Google Reviews</span>
+      <h2 class="section-title section-title--light" id="reviews-title">What Our Customers Say</h2>
+      <div class="reviews-meta">
+        <span class="reviews-score">⭐ 4.1</span>
+        <span class="reviews-count">Based on Google Reviews · Bhatiari, Chittagong</span>
+      </div>
+
+      <div class="reviews-grid" id="reviews-grid">
+
+        <article class="review-card" id="review-1">
+          <div class="review-card__stars">⭐⭐⭐⭐⭐</div>
+          <blockquote class="review-card__quote">"Best Shawarma I have ever tasted."</blockquote>
+          <footer class="review-card__footer">
+            <span class="review-card__name">RAFI Backlinks</span>
+            <span class="review-card__source">Google Review</span>
+          </footer>
+        </article>
+
+        <article class="review-card" id="review-2">
+          <div class="review-card__stars">⭐⭐⭐⭐⭐</div>
+          <blockquote class="review-card__quote">"A really very good food court with well-behaved staff and exceptionally tasty food, especially the Chicken Shawarma with their special white sauce."</blockquote>
+          <footer class="review-card__footer">
+            <span class="review-card__name">Md. Nazimus Sakib</span>
+            <span class="review-card__source">Local Guide</span>
+          </footer>
+        </article>
+
+        <article class="review-card" id="review-3">
+          <div class="review-card__stars">⭐⭐⭐⭐⭐</div>
+          <blockquote class="review-card__quote">"Hot &amp; spicy! Naga Burger 10/10 ❤️"</blockquote>
+          <footer class="review-card__footer">
+            <span class="review-card__name">Nurul Amin Saidee</span>
+            <span class="review-card__source">Local Guide</span>
+          </footer>
+        </article>
+
+        <article class="review-card" id="review-4">
+          <div class="review-card__stars">⭐⭐⭐⭐⭐</div>
+          <blockquote class="review-card__quote">"One of the earliest food carts in Bhatiari with prompt service and good food quality."</blockquote>
+          <footer class="review-card__footer">
+            <span class="review-card__name">Hasan Murad</span>
+            <span class="review-card__source">Local Guide</span>
+          </footer>
+        </article>
+
+        <article class="review-card" id="review-5">
+          <div class="review-card__stars">⭐⭐⭐⭐⭐</div>
+          <blockquote class="review-card__quote">"Just wow! Nice foods!"</blockquote>
+          <footer class="review-card__footer">
+            <span class="review-card__name">Rafi Bin Tofa</span>
+            <span class="review-card__source">Local Guide</span>
+          </footer>
+        </article>
+
+        <article class="review-card" id="review-6">
+          <div class="review-card__stars">⭐⭐⭐⭐⭐</div>
+          <blockquote class="review-card__quote">"Their Shawarma is pretty good."</blockquote>
+          <footer class="review-card__footer">
+            <span class="review-card__name">Sovan</span>
+            <span class="review-card__source">Local Guide</span>
+          </footer>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== GALLERY ==================== -->
+  <section class="section section--cream" id="gallery" aria-labelledby="gallery-title">
+    <div class="wrap">
+      <span class="eyebrow">Gallery</span>
+      <h2 class="section-title" id="gallery-title">The DUMKIN Experience</h2>
+      <p class="section-sub">Dusk vibes, sizzling grills, and a community we're proud of.</p>
+
+      <div class="gallery-grid" id="gallery-grid" role="list">
+        <div class="gallery-item" role="listitem">
+          <img src="Gallery_Images/Gallery1.png" alt="DUMKIN Experience" class="gallery-item__photo">
+        </div>
+        <div class="gallery-item" role="listitem">
+          <img src="Gallery_Images/Gallary2.jpg" alt="DUMKIN Experience" class="gallery-item__photo">
+        </div>
+        <div class="gallery-item" role="listitem">
+          <img src="Gallery_Images/Gallary3.png" alt="DUMKIN Experience" class="gallery-item__photo">
+        </div>
+        <div class="gallery-item" role="listitem">
+          <img src="Gallery_Images/Gallary4.jpg" alt="DUMKIN Experience" class="gallery-item__photo">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== VISIT US ==================== -->
+  <section class="section section--charcoal" id="visit" aria-labelledby="visit-title">
+    <div class="wrap">
+      <span class="eyebrow eyebrow--gold">Find Us</span>
+      <h2 class="section-title section-title--light" id="visit-title">Visit DUMKIN</h2>
+      <p class="section-sub section-sub--muted">We're easy to find in Bhatiari. Drop by or call ahead — we're always ready to serve.</p>
+
+      <div class="visit-grid">
+
+        <div class="visit-info" id="visit-info">
+          <div class="visit-detail" id="visit-address">
+            <div class="visit-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--dumkin-orange)" width="28" height="28"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <div>
+              <strong>Address</strong>
+              <p>Bhatiari, Chittagong, Bangladesh</p>
+            </div>
+          </div>
+
+          <div class="visit-detail" id="visit-phone">
+            <div class="visit-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--dumkin-orange)" width="28" height="28"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            </div>
+            <div>
+              <strong>Call & Order</strong>
+              <p><a href="tel:01304616961" class="visit-phone-link" id="call-link">01304-616961</a></p>
+            </div>
+          </div>
+
+          <div class="visit-detail" id="visit-hours">
+            <div class="visit-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--dumkin-orange)" width="28" height="28"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+            </div>
+            <div>
+              <strong>Opening Hours</strong>
+              <p>12:00 PM – 11:00 PM<br><span class="muted">Open daily · Subject to change</span></p>
+            </div>
+          </div>
+
+          <div class="visit-actions">
+            <a href="tel:01304616961" class="btn btn-primary btn--lg" id="visit-call-btn">Call Now</a>
+            <a href="https://wa.me/8801304616961" target="_blank" rel="noopener" class="btn btn-whatsapp btn--lg" id="visit-whatsapp-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp
+            </a>
+            <a href="https://www.google.com/maps/search/Dumkin+Bhatiari+Chittagong" target="_blank" rel="noopener" class="btn btn-ghost btn--lg" id="visit-directions-btn">Get Directions</a>
+          </div>
+        </div>
+
+        <div class="visit-map" id="visit-map" aria-label="Map showing DUMKIN location in Bhatiari">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3688.9843264568!2d91.7894!3d22.5042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd86b527b4645%3A0x7a86af9ea8d74e28!2sBhatiari%2C%20Chittagong%2C%20Bangladesh!5e0!3m2!1sen!2sbd!4v1690000000000!5m2!1sen!2sbd"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="DUMKIN location in Bhatiari, Chittagong"
+          ></iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner wrap">
+      <div class="footer__brand">
+        <div class="footer__logo">DUMKIN</div>
+        <p class="footer__tagline">Reviving Your Palate</p>
+        <div class="footer__social">
+          <a href="https://www.facebook.com/profile.php?id=61556935949155" target="_blank" rel="noopener" class="footer__social-link" aria-label="Follow us on Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Facebook
+          </a>
+        </div>
+      </div>
+      <div class="footer__links">
+        <h3 class="footer__links-title">Quick Links</h3>
+        <ul role="list">
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#visit">Location</a></li>
+        </ul>
+      </div>
+      <div class="footer__contact">
+        <h3 class="footer__links-title">Contact</h3>
+        <p><a href="tel:01304616961">📞 01304-616961</a></p>
+        <p>📍 Bhatiari, Chittagong</p>
+        <a href="https://www.facebook.com/profile.php?id=61556935949155" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;color:rgba(255,246,236,0.6);font-size:14px;margin-bottom:8px;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Facebook
+        </a>
+        <p class="footer__hours">Open Daily · 12pm – 11pm</p>
+      </div>
+    </div>
+    <div class="footer__copy">
+      <div class="wrap">
+        <p>© 2025 DUMKIN. All rights reserved. · Bhatiari, Chittagong</p>
+      </div>
+    </div>
+    <div class="stripe-divider stripe-divider--footer" aria-hidden="true"></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
